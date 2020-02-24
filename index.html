@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Product landing page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="width-container">
+        <header id="header">
+            <div class="logo-wrapper">
+                <img id="header-img" src="https://i.imgur.com/namXBTC.png" alt="logo">
+                <div class="logo-text">Onion rings</div>
+            </div>
+
+            <nav id="nav-bar">
+                <a class="nav-link" href="#quality">Quality</a>
+                <a class="nav-link" href="#taste">Taste</a>
+                <a class="nav-link" href="#environment">Environment</a>
+            </nav>
+        </header>
+
+        <div class="video-wrapper">
+            <video
+                muted
+                autoplay
+                loop
+                playsinline
+                className="windshield-bg"
+                id="video"
+            >
+                <source src=https://videos.pond5.com/onion-rings-fall-footage-034077492_main_xl.mp4 type="video/mp4" />
+            </video>
+        </div>
+
+        <form action="https://www.freecodecamp.org/email-submit" id="form">
+            <h2>Subscribe for the latest onion rings news!</h2>
+
+            <div class="submit-wrapper">
+                <div class="item-wrapper">
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <input type="submit" id="submit">submit</input>
+            </div>
+        </form>
+
+        <div class="sections-wrapper">
+            <section id="quality">
+                <div class="info">
+                    <h3 class="title">Quality</h3>
+                    <img src="https://images.pexels.com/photos/175415/pexels-photo-175415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="onions quality">
+                </div>
+
+                <div class="text-wrapper">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi id nulla obcaecati quibusdam. A cupiditate deleniti doloremque eveniet facilis fugit, incidunt laborum nihil optio quaerat quia sit, temporibus ut.
+                </div>
+            </section>
+
+            <section id="taste">
+                <div class="info">
+                    <h3 class="title">Taste</h3>
+
+                    <img src="https://images.pexels.com/photos/1797171/pexels-photo-1797171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="onion rings burger taste">
+                </div>
+
+                <div class="text-wrapper">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi id nulla obcaecati quibusdam. A cupiditate deleniti doloremque eveniet facilis fugit, incidunt laborum nihil optio quaerat quia sit, temporibus ut.
+                </div>
+            </section>
+
+            <section id="environment">
+                <div class="text-wrapper">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi id nulla obcaecati quibusdam. A cupiditate deleniti doloremque eveniet facilis fugit, incidunt laborum nihil optio quaerat quia sit, temporibus ut.
+                </div>
+
+                <div class="info">
+                    <h3 class="title">Environment</h3>
+                    <img src="https://images.pexels.com/photos/95215/pexels-photo-95215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="onions environment">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+      const projectName = 'product-landing-page';
+
+      $(window).on("scroll", function() {
+        if($(window).scrollTop() > 40) {
+          $("header").addClass("active");
+        } else {
+          //remove the background property so it comes transparent again (defined in your css)
+          $("header").removeClass("active");
+        }
+      });
+
+      $(".logo-wrapper").click(() => {
+        console.log('1', 1);
+        window.scrollTo(0, 0);
+      });
+    </script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

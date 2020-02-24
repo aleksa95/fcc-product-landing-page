@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-family: Roboto, SansSerif;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding-bottom: 100px;
+}
+
+.width-container {
+    padding: 0 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    max-width: 1100px;
+    width: 100%;
+    transition: all 300ms ease-in;
+    z-index: 2;
+    left: 0;
+    right: 0;
+}
+
+header.active {
+    background: rgba(0,0,0,.7);
+    padding: 20px;
+}
+
+header.active #nav-bar a {
+    color: white;
+}
+
+header.active #nav-bar a:hover {
+    color: #d6d4d3;
+}
+
+.logo-wrapper {
+    transition: all 420ms cubic-bezier(.165,.84,.44,1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo-wrapper:hover {
+    opacity: 0.8;
+}
+
+.logo-text {
+    margin-left: 10px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #FFAD41;
+    font-weight: bold;
+}
+
+#header-img {
+    width: 50px;
+    height: 50px;
+}
+
+#nav-bar a {
+    transition: all 420ms cubic-bezier(.165,.84,.44,1);
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #454443;
+}
+
+#nav-bar a:hover {
+    color: #757371;
+}
+
+#nav-bar a:not(:last-child) {
+    margin-right: 20px;
+}
+
+video {
+    width: 100%;
+    margin: 90px 0 20px 0;
+}
+
+#form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background: #FBBA67;
+}
+
+#form h2 {
+    margin: 0 0 20px;
+    font-size: 4rem;
+}
+
+.submit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-grow: 1;
+}
+
+.item-wrapper label {
+    font-size: 3rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.item-wrapper input {
+    height: 47px;
+    border: none;
+    flex-grow: 1;
+    width: 100%;
+    font-size: 2.5rem;
+    padding-left: 20px;
+}
+
+#submit {
+    cursor: pointer;
+    width: 150px;
+    display: block;
+    border: none;
+    text-transform: uppercase;
+    padding: 12px 10px;
+    background: #FB7352;
+    color: #fff;
+    font-size: 2rem;
+    transition: all 420ms cubic-bezier(.165,.84,.44,1);
+}
+
+#submit:hover {
+    background: #fc876b;
+}
+
+.sections-wrapper {
+
+}
+
+#quality {
+    position: relative;
+}
+
+h3 {
+    margin: 0;
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+section {
+    background: #F4F6F8;
+    display: flex;
+}
+
+section .info .title {
+    position: absolute;
+    font-size: 10rem;
+}
+
+section .info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+#quality .info {
+    width: fit-content;
+}
+
+#quality .info img {
+    width: 400px;
+}
+
+#quality .info .title {
+    transform: rotate(-90deg);
+    left: -99px;
+}
+
+section .text-wrapper {
+    padding: 100px;
+    color: black;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#taste {
+    flex-direction: column;
+}
+
+#taste .text-wrapper {
+    height: 300px;
+}
+
+#taste .info img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#environment .info img {
+    width: 400px;
+}
+
+#environment .info .title {
+    transform: rotate(90deg);
+    left: 55px;
+}
+
+@media only screen and (max-width: 1155px) {
+    header {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .width-container { padding: 0 10px; }
+
+    section {
+        flex-direction: column;
+    }
+
+    section .info img, #quality .info img, #environment .info img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+    }
+
+    section .info .title, #quality .info .title, #environment .info .title {
+        transform: rotate(0deg);
+        left: initial;
+    }
+
+    #environment {
+        flex-direction: column-reverse;
+    }
+}
